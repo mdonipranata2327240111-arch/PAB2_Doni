@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pilem/Models/movie.dart';
+import 'package:pilem/models/movie.dart';
 
 class DetailScreen extends StatelessWidget {
   final Movie movie;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pilem/Models/movie.dart';
+import 'package:pilem/models/movie.dart';
 import 'package:pilem/services/api_service.dart';
 
 import 'detail_screen.dart';
@@ -13,9 +13,8 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   final ApiService _apiService = ApiService();
   List<Movie> _allMovies = [];
-  //trending
-  //popular
-
+  //trnading
+  //populer
 
   @override
   void initState() {
@@ -26,13 +25,13 @@ class HomeScreenState extends State<HomeScreen> {
   Future<void> _loadMovies() async {
     final List<Map<String, dynamic>> allMoviesData =
         await _apiService.getAllMovies();
-        //trending
-        //popular
+        //tranding
+        //populer
         
     setState(() {
       _allMovies = allMoviesData.map((e) => Movie.fromJson(e)).toList();
       //trending
-      //popular
+      //populer
     });
   }
 
@@ -45,6 +44,8 @@ class HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildMoviesList('All Movies', _allMovies),
+            //trending
+            //populer
 
           ],
         ),
