@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       title: 'My Notes',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorSchemeSeed: Colors.blue,
+        colorSchemeSeed: Colors.deepPurple,
         useMaterial3: true,
       ),
       home: const NoteListScreen(),
